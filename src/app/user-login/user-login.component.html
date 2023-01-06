@@ -1,0 +1,17 @@
+<div class="container col-md-5 d-flex ">
+  <h1 class="text-primary">User Login Form</h1>
+  <div>
+    <img src="assets/images/index.png">
+  </div>
+  <form #loginForm="ngForm" class="card" (ngSubmit)="userLogin()">
+    <div class="mb-3">
+      <label class="form-label">Email address</label>
+      <input type="email" [(ngModel)]="user.email" class="form-control" id="email" placeholder="enter your email" name="email">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Password</label>
+      <input type="password" [(ngModel)]="user.password" class="form-control" id="password" placeholder="enter your password" name="password">
+    </div>
+    <button type="submit" class="btn btn-primary" routerLink="/login">Login</button>
+  </form>
+</div>
